@@ -46,7 +46,7 @@ export default function Index() {
           fontWeight: "bold",
           color: "black",
           alignSelf: "center",
-          marginTop: 35, // Adjusted marginTop for better alignment
+          marginTop: 35,
         }}
         >Wa Nanda Sulystrian</Text>
       </View>
@@ -62,16 +62,6 @@ export default function Index() {
       }}>
       </View>
 
-      <View style={{
-        width: 20,
-        height: 20,
-        borderRadius: 100,
-      }}>
-      </View>
-
     </View>
   );
 }
-
-// Tambahkan bentuk segitiga, pil, dan persegi panjang. Di dalam persegi panjang itu berisi nama,
-// didalam pil itu berisi nim
