@@ -9,34 +9,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <View style={
-        {
-          backgroundColor: "lightgrey",
-        }
-      }>
-
-        <Text style={
-          {
-            fontSize: 20,
-            color: "black",
-          }
-        }>105841110622</Text>
-        <Text style={
-          {
-            color: "red",
-            fontWeight: "bold",
-          }
-        }>Wa Nanda Sulystrian</Text>
-      </View>
-
-      <View style={{
-        width: 20,
-        height: 20,
-        backgroundColor: "green",
-        borderRadius: 100,
-      }}>
-      </View>
-
+      
       <View
         style={{
           width: 100,
