@@ -1,126 +1,52 @@
-import { useState } from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text } from "react-native";
 
 export default function Index() {
-  const [imageStates, setImageStates] = useState(Array(9).fill(false));
-  const [imageScales, setImageScales] = useState(Array(9).fill(1));
-
-  const handleImagePress = (index: number) => {
-    const newImageStates = [...imageStates];
-    newImageStates[index] = !newImageStates[index];
-    setImageStates(newImageStates);
-
-    const newImageScales = [...imageScales];
-    newImageScales[index] =
-      newImageScales[index] < 2 ? Math.min(newImageScales[index] + 0.2, 2) : 1;
-    setImageScales(newImageScales);
-  };
-
-  const mainImages = [
-    "https://simak.unismuh.ac.id/upload/mahasiswa/105841110622_.jpg",
-    "https://picsum.photos/seed/1/200",
-    "https://picsum.photos/seed/2/200",
-    "https://picsum.photos/seed/3/200",
-    "https://uploads-us-west-2.insided.com/figma-en/attachment/7105e9c010b3d1f0ea893ed5ca3bd58e6cec090e.gif",
-    "https://picsum.photos/seed/4/200",
-    "https://picsum.photos/seed/5/200",
-    "https://picsum.photos/seed/6/200",
-    "https://picsum.photos/seed/7/200",
-  ];
-
-  const altImages = [
-    "https://picsum.photos/seed/8/200",
-    "https://picsum.photos/seed/9/200",
-    "https://picsum.photos/seed/10/200",
-    "https://picsum.photos/seed/11/200",
-    "https://picsum.photos/seed/12/200",
-    "https://picsum.photos/seed/13/200",
-    "https://picsum.photos/seed/14/200",
-    "https://picsum.photos/seed/15/200",
-    "https://picsum.photos/seed/16/200",
-  ];
-
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+    <ScrollView contentContainerStyle={{ padding: 20 }}>
 
-        {/* Biodata */}
-        <View style={{ backgroundColor: "lightgrey", padding: 10 }}>
-          <Text style={{ fontSize: 20, color: "black" }}>105841110622</Text>
-          <Text style={{ color: "red", fontWeight: "bold" }}>
-            Wa Nanda Sulystrian
-          </Text>
-        </View>
+      <Text style={{ fontFamily: "lato-bold", fontSize: 26, color: "blue", fontWeight: "bold" }}>
+        ILFAUZA FEBRIANTY FAISAL
+        {"\n"}105841110322
+      </Text>
+      <Text style={{ fontFamily: "OpenSans_Condensed-Bold", fontSize: 24 }}>
+        SA'BAN
+        {"\n"}105841110322
+      </Text>
+      <Text style={{ fontFamily: "poppins-bold", fontSize: 15 }}>
+        NUR FADILLAH SARI
+        {"\n"}105841110422
+      </Text>
+      <Text style={{ fontFamily: "spacemono-regular", fontSize: 15 }}>
+        Muh. Hijril Ilman
+        {"\n"}105841110522
+      </Text>
+      <Text style={{ fontFamily: "Roboto_Condensed-Bold", fontSize: 15 }}>
+        Wa Nanda Sulystrian
+        {"\n"}105841110622
+      </Text>
 
-        {/* Ornamen */}
-        <View style={{ width: 20, height: 20, backgroundColor: "green", borderRadius: 100 }} />
-        <View style={{
-          width: 100, height: 180, backgroundColor: "goldenrod",
-          borderRadius: 50, marginBottom: 20, alignSelf: "center",
-          justifyContent: "center", alignItems: "center", marginTop: 20,
-        }}>
-          <Text style={{ fontSize: 13, fontWeight: "bold" }}>105841110622</Text>
-        </View>
 
-        <View style={{ width: 100, height: 50, backgroundColor: "goldenrod", marginBottom: 20 }}>
-          <Text style={{
-            fontSize: 10, fontWeight: "bold", color: "black",
-            alignSelf: "center", marginTop: 18,
-          }}>Wa Nanda Sulystrian</Text>
-        </View>
 
-        <View style={{
-          borderLeftWidth: 50, borderRightWidth: 50, borderBottomWidth: 100,
-          backgroundColor: 'transparent', borderRightColor: 'transparent',
-          borderLeftColor: 'transparent', borderBottomColor: 'goldenrod',
-        }} />
-
-        {/* Grid Gambar */}
-        <Text style={{
-          fontSize: 16, fontWeight: 'bold', textAlign: 'center', marginVertical: 15,
-        }}>
-          Grid Gambar Interaktif
-        </Text>
-
-        <View style={{
-          width: 320, // total lebar grid 3 kolom + margin
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}>
-          {mainImages.map((main, index) => (
-            <View
-              key={index}
-              style={{
-                width: 100,
-                height: 100,
-                margin: 5,
-                overflow: "hidden", // penting agar gambar yang membesar tetap di dalam kotak
-              }}
-            >
-              <TouchableOpacity onPress={() => handleImagePress(index)}>
-                <Image
-                  source={{
-                    uri: imageStates[index] ? altImages[index] : mainImages[index],
-                  }}
-                  style={{
-                    width: 100,
-                    height: 100,
-                    transform: [{ scale: imageScales[index] }],
-                    borderRadius: 10,
-                    borderColor: imageStates[index] ? "red" : "gray",
-                    borderWidth: 2,
-                    resizeMode: "cover",
-                  }}
-                  onError={() => {
-                    console.warn(`Gambar ${index} gagal dimuat`);
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          ))}
-        </View>
-      </ScrollView>
-    </View>
+      <Text style={{ fontFamily: "ibmplex-variable", fontSize: 24 }}>
+        105841110722
+        {"\n"}MUH. TEGAR AL FIKRI
+      </Text>
+      <Text style={{ fontFamily: "inter-variable", fontSize: 24 }}>
+        105841110822
+        {"\n"}Rayhanatul Jannah
+      </Text>
+      <Text style={{ fontFamily: "montserrat-variable", fontSize: 24 }}>
+        105841110922
+        {"\n"}Hanna Maryam
+      </Text>
+      <Text style={{ fontFamily: "raleway-variable", fontSize: 24 }}>
+        105841111022
+        {"\n"}Afifah Auliyah
+      </Text>
+      <Text style={{ fontFamily: "sora-variable", fontSize: 24 }}>
+        105841107622
+        {"\n"}MUH FIKRIR MAULANA
+      </Text>
+    </ScrollView>
   );
 }
