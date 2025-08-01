@@ -1,52 +1,29 @@
-import { ScrollView, Text } from "react-native";
+import AntDesign from '@expo/vector-icons/AntDesign';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import Octions from '@expo/vector-icons/Octicons';
+import { ScrollView, Text, View } from "react-native";
 
 export default function Index() {
   return (
     <ScrollView contentContainerStyle={{ padding: 20 }}>
 
-      <Text style={{ fontFamily: "lato-bold", fontSize: 26, color: "blue", fontWeight: "bold" }}>
-        ILFAUZA FEBRIANTY FAISAL
-        {"\n"}105841110322
-      </Text>
-      <Text style={{ fontFamily: "OpenSans_Condensed-Bold", fontSize: 24 }}>
-        SA'BAN
-        {"\n"}105841110322
-      </Text>
-      <Text style={{ fontFamily: "poppins-bold", fontSize: 15 }}>
-        NUR FADILLAH SARI
-        {"\n"}105841110422
-      </Text>
-      <Text style={{ fontFamily: "spacemono-regular", fontSize: 15 }}>
-        Muh. Hijril Ilman
-        {"\n"}105841110522
-      </Text>
-      <Text style={{ fontFamily: "Roboto_Condensed-Bold", fontSize: 15 }}>
-        Wa Nanda Sulystrian
-        {"\n"}105841110622
-      </Text>
+      <View style={{ height: 20 }}>
+        <FontAwesome name="music" size={45} color="grey" />
+        <FontAwesome name="search" size={45} color="grey" />
+        <AntDesign name="upcircle" size={45} color="black" />
+        <AntDesign name="downcircle" size={45} color="black" />
+        <MaterialIcons name="6-ft-apart" size={45} color="green" />
+        <MaterialIcons name="abc" size={45} color="green" />
+        <Ionicons name="arrow-up-circle-sharp" size={45} color="brown" />
+        <Ionicons name="at" size={45} color="brown" />
+        <Octions name="feed-discussion" size={45} color="purple" />
+        <Octions name="feed-heart" size={45} color="red" />
+      </View>
 
-
-
-      <Text style={{ fontFamily: "ibmplex-variable", fontSize: 24 }}>
-        105841110722
-        {"\n"}MUH. TEGAR AL FIKRI
-      </Text>
-      <Text style={{ fontFamily: "inter-variable", fontSize: 24 }}>
-        105841110822
-        {"\n"}Rayhanatul Jannah
-      </Text>
-      <Text style={{ fontFamily: "montserrat-variable", fontSize: 24 }}>
-        105841110922
-        {"\n"}Hanna Maryam
-      </Text>
-      <Text style={{ fontFamily: "raleway-variable", fontSize: 24 }}>
-        105841111022
-        {"\n"}Afifah Auliyah
-      </Text>
-      <Text style={{ fontFamily: "sora-variable", fontSize: 24 }}>
-        105841107622
-        {"\n"}MUH FIKRIR MAULANA
-      </Text>
     </ScrollView>
   );
 }
+
+
